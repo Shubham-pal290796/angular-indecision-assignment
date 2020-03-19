@@ -10,7 +10,7 @@ export class IndecisionComponent implements OnInit {
   inputArray = [];
   showInitialText : boolean = true;
   inputVal : string = '';
-  input : string = "";
+  input : string = null;
 
   constructor() { }
 

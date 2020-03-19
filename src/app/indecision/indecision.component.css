@@ -40,13 +40,14 @@
   width: 600px;
   margin-top: 30px;
   left: 30%;
+  height: 100%;
 
   /* padding: 10px; */
   
 }
 
 .box .box-head {
-  position: absolute;
+  position: relative;
   /* display: inline; */
   background-color: black;
   top: 0;
@@ -58,27 +59,22 @@
 }
 
 .box .box-body {
-  position: absolute;
+  position: relative;
   /* display: inline; */
   background-color: green;
-  top: 50px;
+  /* top: 50px; */
   left: 0;
   width: 560px;
   padding: 20px;
 }
 
-/* .box .box-foot {
-  position: relative;
-  background-color: blue;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  top: 60px;
-} */
-
 .box-head h3 {
   margin-top: 16px;
   margin-left: 16px;
+}
+
+.box-body h3 {
+  text-align: center;
 }
 
 .remove-all-btn {
@@ -91,4 +87,24 @@
   color: white;
   padding: 16px;
   cursor: pointer;
+}
+
+.footer {
+  position: relative;
+  background-color: blue;
+  width: 560px;
+  padding: 20px;
+  border-top: 1px solid white;
+}
+
+.footer input {
+  padding: 10px;
+  font-size: 20px;
+  width: 70%;
+}
+
+.footer button {
+  padding: 10px;
+  font-size: 20px;
+  margin-left: 18px;
 }

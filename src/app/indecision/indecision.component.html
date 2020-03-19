@@ -12,7 +12,7 @@
   </div>
 
   <div class="box-body">
-    <h3 *ngIf = "showInitialText">Please add an option to continue</h3>
+    <h3 *ngIf = "showInitialText">Please add an option to get started!</h3>
     
     <ol>
       <li *ngFor ="let ind of inputArray">
@@ -20,11 +20,11 @@
       </li>
     </ol>
   </div>
-<!-- 
-  <div class="box-foot">
-    box footer
-  </div> -->
+
+  <div class="footer">
+    <input type="text" [value] = "input" (input) = "handleInput($event)">
+    <button (click) = "submit()">Add Option</button>
+  </div>
+
 </div>
 
-<input type="text" [value] = "input" (input) = "handleInput($event)">
-<button (click) = "submit()">Add Option</button>
