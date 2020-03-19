@@ -13,6 +13,7 @@ export class IndecisionComponent implements OnInit {
   input : string  = '';
   latestInput : string;
   showModal :boolean = false;
+  inputError : boolean = false;
 
   constructor() { }
 
@@ -25,10 +26,13 @@ export class IndecisionComponent implements OnInit {
 
   submit() {
     if (this.inputVal != "") {
+      this.inputError = false;
       this.inputArray.push(this.inputVal);
       if (this.inputArray.length > 0) {
         this.showInitialText = false;
       }
+    } else {
+      this.inputError = true;
     }
     this.input = '';
   }

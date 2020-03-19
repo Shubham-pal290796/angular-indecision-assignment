@@ -25,6 +25,7 @@
   </div>
 
   <div class="footer">
+    <h3 *ngIf = "inputError">Enter valid value to add item.</h3>
     <input type="text" [value] = "input" (input) = "handleInput($event)">
     <button (click) = "submit()">Add Option</button>
   </div>
@@ -35,10 +36,9 @@
 
 
 <div class="modal" *ngIf = "showModal">
-  <div class="modal-box">
 
     <h3>Last Entered Option</h3>
     <h2>{{latestInput}}</h2>
     <button (click) = "closeModal()">Okay</button>
-  </div>
+
 </div>
