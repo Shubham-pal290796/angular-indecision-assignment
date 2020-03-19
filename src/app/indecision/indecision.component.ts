@@ -12,6 +12,7 @@ export class IndecisionComponent implements OnInit {
   inputVal : string = '';
   input : string  = '';
   latestInput : string;
+  showModal :boolean = false;
 
   constructor() { }
 
@@ -50,8 +51,15 @@ export class IndecisionComponent implements OnInit {
   }
 
   showLatest() {
+    document.getElementById("body").style.opacity = "0.2";
+    this.showModal = true;
     var length = this.inputArray.length;
     this.latestInput = this.inputArray[length - 1];
+  }
+
+  closeModal() {
+    this.showModal = false;
+    document.getElementById("body").style.opacity = "1";
   }
 
 }

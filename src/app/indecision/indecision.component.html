@@ -1,3 +1,5 @@
+<div class="body" id="body">
+
 <div class="header">
   <h1>Indecision</h1>
   <h3>Put your life in the hands of a computer.</h3>
@@ -5,11 +7,9 @@
 
 <button class="btn" (click) = "showLatest()">What Should I Do?</button>
 
-
-
 <div class="box">
   <div class="box-head">
-    <h3>Options</h3>
+    <h3>Your Options</h3>
     <button (click) = "removeAll()" class="remove-all-btn">Remove All</button>
   </div>
 
@@ -31,5 +31,14 @@
 
 </div>
 
-{{latestInput}}
+</div>
 
+
+<div class="modal" *ngIf = "showModal">
+  <div class="modal-box">
+
+    <h3>Last Entered Option</h3>
+    <h2>{{latestInput}}</h2>
+    <button (click) = "closeModal()">Okay</button>
+  </div>
+</div>
