@@ -10,7 +10,8 @@ export class IndecisionComponent implements OnInit {
   inputArray = [];
   showInitialText : boolean = true;
   inputVal : string = '';
-  input : string = null;
+  input : string  = '';
+  latestInput : string;
 
   constructor() { }
 
@@ -28,7 +29,7 @@ export class IndecisionComponent implements OnInit {
         this.showInitialText = false;
       }
     }
-    this.input = null;
+    this.input = '';
   }
 
   removeAll() {
@@ -36,5 +37,21 @@ export class IndecisionComponent implements OnInit {
     this.showInitialText = true;
   }
 
+  removeInd(ind) {
+    if (ind) {
+      var index = this.inputArray.indexOf(ind);
+      if (index > -1) {
+        this.inputArray.splice(index,1);
+      }
+    }
+    if (this.inputArray.length == 0) {
+      this.showInitialText = true;
+    }
+  }
+
+  showLatest() {
+    var length = this.inputArray.length;
+    this.latestInput = this.inputArray[length - 1];
+  }
 
 }
