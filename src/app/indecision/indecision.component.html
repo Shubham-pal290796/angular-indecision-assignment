@@ -1,0 +1,30 @@
+<div class="header">
+  <h1>Indecision</h1>
+  <h3>Put your life in the hands of a computer.</h3>
+</div>
+
+<button class="btn">What Should I Do?</button>
+
+<div class="box">
+  <div class="box-head">
+    <h3>Options</h3>
+    <button (click) = "removeAll()" class="remove-all-btn">Remove All</button>
+  </div>
+
+  <div class="box-body">
+    <h3 *ngIf = "showInitialText">Please add an option to continue</h3>
+    
+    <ol>
+      <li *ngFor ="let ind of inputArray">
+        <span>{{ind}}</span>
+      </li>
+    </ol>
+  </div>
+<!-- 
+  <div class="box-foot">
+    box footer
+  </div> -->
+</div>
+
+<input type="text" [value] = "input" (input) = "handleInput($event)">
+<button (click) = "submit()">Add Option</button>
