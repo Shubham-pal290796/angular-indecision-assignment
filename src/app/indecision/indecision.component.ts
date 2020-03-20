@@ -14,6 +14,7 @@ export class IndecisionComponent implements OnInit {
   latestInput : string;
   showModal :boolean = false;
   inputError : boolean = false;
+  isBtnDisabled : boolean = true;
 
   constructor() { }
 
@@ -30,6 +31,7 @@ export class IndecisionComponent implements OnInit {
       this.inputArray.push(this.inputVal);
       if (this.inputArray.length > 0) {
         this.showInitialText = false;
+        this.isBtnDisabled = false;
       }
     } else {
       this.inputError = true;
@@ -40,6 +42,7 @@ export class IndecisionComponent implements OnInit {
   removeAll() {
     this.inputArray = [];
     this.showInitialText = true;
+    this.isBtnDisabled = true;
   }
 
   removeInd(ind) {

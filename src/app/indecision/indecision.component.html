@@ -5,7 +5,7 @@
   <h3>Put your life in the hands of a computer.</h3>
 </div>
 
-<button class="btn" (click) = "showLatest()">What Should I Do?</button>
+<button class="btn" (click) = "showLatest()" [disabled] = "isBtnDisabled" [ngClass] = "{'btndisabled' : }">What Should I Do?</button>
 
 <div class="box">
   <div class="box-head">
